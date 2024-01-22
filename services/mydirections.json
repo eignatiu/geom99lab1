@@ -1,1 +1,385 @@
-Remove this text and paste your JSON results from the Directions API
+{
+   "geocoded_waypoints" : 
+   [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJ6YhJCjH1qjsRNYptly1xmRc",
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJuT4XFtqKqjsReNaNdY0Y3Co",
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJuT4XFtqKqjsReNaNdY0Y3Co",
+         "types" : 
+         [
+            "establishment",
+            "point_of_interest",
+            "school"
+         ]
+      }
+   ],
+   "routes" : 
+   [
+      {
+         "bounds" : 
+         {
+            "northeast" : 
+            {
+               "lat" : 10.7816506,
+               "lng" : 78.6952091
+            },
+            "southwest" : 
+            {
+               "lat" : 10.7601967,
+               "lng" : 78.68807939999999
+            }
+         },
+         "copyrights" : "Map data ©2024",
+         "legs" : 
+         [
+            {
+               "distance" : 
+               {
+                  "text" : "3.4 km",
+                  "value" : 3356
+               },
+               "duration" : 
+               {
+                  "text" : "9 mins",
+                  "value" : 549
+               },
+               "end_address" : "Alpha Avenue K.K. Nagar, Saraswathi Nagar, North East Extension, Sudhana nagar, Tiruchirappalli, Tamil Nadu 620007, India",
+               "end_location" : 
+               {
+                  "lat" : 10.7604955,
+                  "lng" : 78.6952091
+               },
+               "start_address" : "QMHQ+R5V, Kajamalai Colony, Edamalaipatti Pudur, Tiruchirappalli, Tamil Nadu 620021, India",
+               "start_location" : 
+               {
+                  "lat" : 10.7795412,
+                  "lng" : 78.68807939999999
+               },
+               "steps" : 
+               [
+                  {
+                     "distance" : 
+                     {
+                        "text" : "0.3 km",
+                        "value" : 258
+                     },
+                     "duration" : 
+                     {
+                        "text" : "1 min",
+                        "value" : 33
+                     },
+                     "end_location" : 
+                     {
+                        "lat" : 10.7816506,
+                        "lng" : 78.6890576
+                     },
+                     "html_instructions" : "Head \u003cb\u003enortheast\u003c/b\u003e on \u003cb\u003eKajamalai Colony Rd\u003c/b\u003e toward \u003cb\u003eRace Course Road\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Light Story Wedding Photography (on the left)\u003c/div\u003e",
+                     "polyline" : 
+                     {
+                        "points" : "ckx`Aowg_NsAi@QIkBi@MEeE_B"
+                     },
+                     "start_location" : 
+                     {
+                        "lat" : 10.7795412,
+                        "lng" : 78.68807939999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : 
+                     {
+                        "text" : "0.8 km",
+                        "value" : 781
+                     },
+                     "duration" : 
+                     {
+                        "text" : "2 mins",
+                        "value" : 94
+                     },
+                     "end_location" : 
+                     {
+                        "lat" : 10.7763024,
+                        "lng" : 78.69352669999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e at Arabic College Bus Stop onto \u003cb\u003eRace Course Road\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Er S.Britto, Registered Valuer (on the left)\u003c/div\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : 
+                     {
+                        "points" : "ixx`As}g_NTK`@ShB{@RO|@g@jDcBVOlAk@TMb@Ub@Y`Am@POHIFGLQ@?X]LSl@{@DIbAuAhB_CHKd@k@Xc@"
+                     },
+                     "start_location" : 
+                     {
+                        "lat" : 10.7816506,
+                        "lng" : 78.6890576
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : 
+                     {
+                        "text" : "1.9 km",
+                        "value" : 1938
+                     },
+                     "duration" : 
+                     {
+                        "text" : "5 mins",
+                        "value" : 301
+                     },
+                     "end_location" : 
+                     {
+                        "lat" : 10.7602913,
+                        "lng" : 78.6920902
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e at Al Arab onto \u003cb\u003eEVR Rd\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eKajamalai Main Road\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by E-Royce Motors India Pvt Ltd Trichy (on the right)\u003c/div\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : 
+                     {
+                        "points" : "{vw`Aqyh_N?@NNLJPF\\FPDf@BZ@z@?X?v@?J?^BB?h@@rABhAEL?d@AVA^?n@B~@DbA?V?P?XB@?~@LD@nBNH@bAFP@|AFN@N?B?FAHALETONKhBsAl@e@JIHGHCDABAJ?ZBbDb@bANdAX`AHL@pAL^DV@^BV?vA?`A?nAA`@@LBH@B@@BBB?@BB@B?D?F?BYvAAF?D?@?B?B@@@B@B@BB@DBFBRDVFz@Lp@Jt@Hj@Hj@H@?RBP@L?B?d@ClAIDA|@E\\ANA`@A\\?n@?"
+                     },
+                     "start_location" : 
+                     {
+                        "lat" : 10.7763024,
+                        "lng" : 78.69352669999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : 
+                     {
+                        "text" : "0.2 km",
+                        "value" : 242
+                     },
+                     "duration" : 
+                     {
+                        "text" : "1 min",
+                        "value" : 78
+                     },
+                     "end_location" : 
+                     {
+                        "lat" : 10.7601967,
+                        "lng" : 78.6943045
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at Steel Authority Of India - SAIL Stock Yard\u003cdiv style=\"font-size:0.9em\"\u003ePass by VRR Agency (on the left)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : 
+                     {
+                        "points" : "yrt`Aqph_NF_E?g@BYBQ?E@M?U?_@?sA?G"
+                     },
+                     "start_location" : 
+                     {
+                        "lat" : 10.7602913,
+                        "lng" : 78.6920902
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : 
+                     {
+                        "text" : "12 m",
+                        "value" : 12
+                     },
+                     "duration" : 
+                     {
+                        "text" : "1 min",
+                        "value" : 4
+                     },
+                     "end_location" : 
+                     {
+                        "lat" : 10.7603041,
+                        "lng" : 78.6943005
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : 
+                     {
+                        "points" : "grt`Ak~h_NS?"
+                     },
+                     "start_location" : 
+                     {
+                        "lat" : 10.7601967,
+                        "lng" : 78.6943045
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : 
+                     {
+                        "text" : "73 m",
+                        "value" : 73
+                     },
+                     "duration" : 
+                     {
+                        "text" : "1 min",
+                        "value" : 19
+                     },
+                     "end_location" : 
+                     {
+                        "lat" : 10.7602667,
+                        "lng" : 78.69495449999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : 
+                     {
+                        "points" : "{rt`Ak~h_NG[?Q?SBMDUB["
+                     },
+                     "start_location" : 
+                     {
+                        "lat" : 10.7603041,
+                        "lng" : 78.6943005
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : 
+                     {
+                        "text" : "25 m",
+                        "value" : 25
+                     },
+                     "duration" : 
+                     {
+                        "text" : "1 min",
+                        "value" : 10
+                     },
+                     "end_location" : 
+                     {
+                        "lat" : 10.7604938,
+                        "lng" : 78.694959
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : 
+                     {
+                        "points" : "urt`Ambi_Nk@A"
+                     },
+                     "start_location" : 
+                     {
+                        "lat" : 10.7602667,
+                        "lng" : 78.69495449999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : 
+                     {
+                        "text" : "27 m",
+                        "value" : 27
+                     },
+                     "duration" : 
+                     {
+                        "text" : "1 min",
+                        "value" : 10
+                     },
+                     "end_location" : 
+                     {
+                        "lat" : 10.7604955,
+                        "lng" : 78.6952091
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e at ALPHA PLUS MATRIC HR.SEC.SCHOOL\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the left\u003c/div\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : 
+                     {
+                        "points" : "att`Aobi_NAq@"
+                     },
+                     "start_location" : 
+                     {
+                        "lat" : 10.7604938,
+                        "lng" : 78.694959
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            },
+            {
+               "distance" : 
+               {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : 
+               {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "end_address" : "Alpha Avenue K.K. Nagar, Saraswathi Nagar, North East Extension, Sudhana nagar, Tiruchirappalli, Tamil Nadu 620007, India",
+               "end_location" : 
+               {
+                  "lat" : 10.7604955,
+                  "lng" : 78.6952091
+               },
+               "start_address" : "Alpha Avenue K.K. Nagar, Saraswathi Nagar, North East Extension, Sudhana nagar, Tiruchirappalli, Tamil Nadu 620007, India",
+               "start_location" : 
+               {
+                  "lat" : 10.7604955,
+                  "lng" : 78.6952091
+               },
+               "steps" : 
+               [
+                  {
+                     "distance" : 
+                     {
+                        "text" : "1 m",
+                        "value" : 0
+                     },
+                     "duration" : 
+                     {
+                        "text" : "1 min",
+                        "value" : 0
+                     },
+                     "end_location" : 
+                     {
+                        "lat" : 10.7604955,
+                        "lng" : 78.6952091
+                     },
+                     "html_instructions" : "Head",
+                     "polyline" : 
+                     {
+                        "points" : "ctt`Aadi_N"
+                     },
+                     "start_location" : 
+                     {
+                        "lat" : 10.7604955,
+                        "lng" : 78.6952091
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : 
+         {
+            "points" : "ckx`Aowg_NsAi@}Bs@sEeBv@_@fJwE~C_BdBgAZYp@w@dCoDrBkC~@oANP^Rn@LbADxC?`DHtCInABbCDh@?ZB~D`@bERd@Cb@UxB_Bx@o@RKHCf@BfFr@dAX`AH~ANv@Fv@BxC?pB?VDHJDF?L[hB@JHLx@TnEl@rANdCMpBK~@An@?F_EBaABW@wC?GS?Gm@LsAk@AAq@"
+         },
+         "summary" : "EVR Rd/Kajamalai Main Road",
+         "warnings" : [],
+         "waypoint_order" : 
+         [
+            0
+         ]
+      }
+   ],
+   "status" : "OK"
+}
