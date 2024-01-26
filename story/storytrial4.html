@@ -1,0 +1,266 @@
+<!-- Template from simplemap.html -->
+
+<!DOCTYPE html>
+<!-- source: https://developers.google.com/maps/documentation/javascript/overview#maps_map_simple-html -->
+<!-- STUDENTS: Modify this file to provided the Google API key to get it working, 
+               then modify the lat and lng and zoom to point to a place you know  -->
+<html>
+  <head>
+    <title>EI_StoryMap</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #mapid {
+          height: 100%;
+          width: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          background-color: black;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 50px;
+            position: absolute;
+            top: 4%;
+            left: 58%;
+            transform: translate(-50%, 50%);
+        }
+
+        #content{
+            position: absolute;
+            top: 68%;
+            left: 27%;
+            transform: translate(-50%, 50%);
+            max-width: 20%;
+            justify-content: center;
+            text-align: justify            ;
+        }
+
+    </style>
+    <script>
+      let map;
+
+    //   https://googlemaps.github.io/js-samples/ control-bounds-restriction
+    //   Restricting zoom out beyond the boundaries of India
+
+      const BOUNDS = {
+            north: 38.00,
+            south: 4.00,
+            west: 66.00,
+            east: 100.00,
+            };
+
+
+      async function initMap() {
+          // Request needed libraries.
+            const { Map, InfoWindow } = await google.maps.importLibrary("maps");
+            const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary(
+                "marker",
+            );
+        map = new google.maps.Map(document.getElementById("mapid"), {
+          center: { lat: 20.5937, lng: 78.9629 },
+          restriction: {
+                        latLngBounds: BOUNDS,
+                        strictBounds: false,
+                        },
+          zoom: 5,
+          // Styles a map in night mode.
+          // https://developers.google.com/maps/documentation/javascript/examples/style-array
+        //   styles: [
+        //         { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+        //         { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
+        //         { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
+        //         {
+        //             featureType: "administrative.locality",
+        //             elementType: "labels.text.fill",
+        //             stylers: [{ color: "#d59563" }],
+        //         },
+        //         {
+        //             featureType: "poi",
+        //             elementType: "labels.text.fill",
+        //             stylers: [{ color: "#d59563" }],
+        //         },
+        //         {
+        //             featureType: "poi.park",
+        //             elementType: "geometry",
+        //             stylers: [{ color: "#263c3f" }],
+        //         },
+        //         {
+        //             featureType: "poi.park",
+        //             elementType: "labels.text.fill",
+        //             stylers: [{ color: "#6b9a76" }],
+        //         },
+        //         {
+        //             featureType: "road",
+        //             elementType: "geometry",
+        //             stylers: [{ color: "#38414e" }],
+        //         },
+        //         {
+        //             featureType: "road",
+        //             elementType: "geometry.stroke",
+        //             stylers: [{ color: "#212a37" }],
+        //         },
+        //         {
+        //             featureType: "road",
+        //             elementType: "labels.text.fill",
+        //             stylers: [{ color: "#9ca5b3" }],
+        //         },
+        //         {
+        //             featureType: "road.highway",
+        //             elementType: "geometry",
+        //             stylers: [{ color: "#746855" }],
+        //         },
+        //         {
+        //             featureType: "road.highway",
+        //             elementType: "geometry.stroke",
+        //             stylers: [{ color: "#1f2835" }],
+        //         },
+        //         {
+        //             featureType: "road.highway",
+        //             elementType: "labels.text.fill",
+        //             stylers: [{ color: "#f3d19c" }],
+        //         },
+        //         {
+        //             featureType: "transit",
+        //             elementType: "geometry",
+        //             stylers: [{ color: "#2f3948" }],
+        //         },
+        //         {
+        //             featureType: "transit.station",
+        //             elementType: "labels.text.fill",
+        //             stylers: [{ color: "#d59563" }],
+        //         },
+        //         {
+        //             featureType: "water",
+        //             elementType: "geometry",
+        //             stylers: [{ color: "#17263c" }],
+        //         },
+        //         {
+        //             featureType: "water",
+        //             elementType: "labels.text.fill",
+        //             stylers: [{ color: "#515c6d" }],
+        //         },
+        //         {
+        //             featureType: "water",
+        //             elementType: "labels.text.stroke", 
+        //             stylers: [{ color: "#17263c" }],
+        //         },                
+        //     ],
+        
+                    // Map's styles property cannot be set when a mapId is present. 
+                    // When a mapId is present, Map styles are controlled via the cloud console. 
+                    // Please see documentation at https://developers.google.com/maps/documentation/javascript/styling#cloud_tooling
+
+            mapId: "4504f8b37365c3d0",
+
+                    // The map is initialized without a valid Map ID, which will prevent use of Advanced Markers.
+                    // Learned that Maps using a Map ID can only be customized and published using cloud services and is a paid feature.
+                    // The coloring schema of the night mode works without the map ID
+                    // Learned that AdvancedMarkerElement and other functionality will not work without a valid Map ID
+            
+        });
+                // Set LatLng and title text for the markers. The first marker (Boynton Pass)
+        // receives the initial focus when tab is pressed. Use arrow keys to
+        // move between markers; press tab again to cycle through the map controls.
+        const mkloc = [
+        {
+            position: { lat: 11.984411, lng: 92.951431 },
+            title: "Radhanagar Beach",
+        },
+        // lat: 34.8791806, lng: -111.8265049 "Boynton Pass"
+        // 11.98441116528618, 92.95143185192832 "Radhanagar Beach"
+        {
+            position: { lat: 15.625204, lng: 73.729207 },
+            title: "Morjim Beach",
+        },
+        // lat: 34.8559195, lng: -111.7988186 "Airport Mesa"
+        // 15.625204814777744, 73.72920752982071 "Morjim Beach"
+        {
+            position: { lat: 10.939464, lng: 72.288408 },
+            title: "Bangaram Atoll",
+        },
+        // lat: 34.832149, lng: -111.7695277 "Chapel of the Holy Cross"
+        // 10.939464134530045, 72.28840834682556 "Bangaram Atoll"
+        {
+            position: { lat: 19.178135, lng: 73.570364 },
+            title: "Ahupe Village",
+        },
+        // lat: 34.823736, lng: -111.8001857 "Red Rock Crossing"
+        // 19.178135302767707, 73.57036472126832 "Ahupe Village"
+        {
+            position: { lat: 13.513497, lng: 74.685594 },
+            title: "Padukere Beach",
+        },
+        // lat: 34.800326, lng: -111.7665047 "Bell Rock"
+        // 13.513497335329923, 74.68559491704816 "Padukere Beach"
+        {
+            position: { lat: 25.287395, lng: 92.126271 },
+            title: "Krang Shuri Falls",
+        },
+        // 25.287395370080674, 92.12627135177544 "Krang Shuri Falls"
+        {
+            position: { lat: 15.596802, lng: 74.187276 },
+            title: "Madei Wildlife Sanctuary",
+        },
+        // 15.596802721454427, 74.18727665091978 "Madei Wildlife Sanctuary"
+        {
+            position: { lat: 19.464892, lng: 73.829305 },
+            title: "Purushwadi",
+        },
+        // 19.464892572026606, 73.82930505605314 "Purushwadi"
+        ];
+        // Create an info window to share between markers.
+        const infoWindow = new InfoWindow();
+    
+        // Create the markers.
+        mkloc.forEach(({ position, title }, i) => {
+            const pin = new PinElement()
+        // const pin = new PinElement({
+        //     glyph: `${i + 1}`,
+        // });
+        const marker = new AdvancedMarkerElement({
+            position,
+            map,
+            title: `${i + 1}. ${title}`,
+            content: pin.element,
+        });
+    
+        // Add a click listener for each marker, and set up the info window.
+        marker.addListener("click", ({ domEvent, latLng }) => {
+            const { target } = domEvent;
+    
+            infoWindow.close();
+            infoWindow.setContent(marker.title);
+            infoWindow.open(marker.map, marker);
+        });
+        });
+      }
+    </script>
+  </head>
+
+
+
+  <body>
+    <div id="mapid"></div>
+    <h1> Bioluminescence in India </h1>
+    <p id="content">
+        Bioluminescence is the capability of a living organism to emight light by chemical reactions within. 
+        Various marine organisms like certain jellyfish, plankton, and deep-sea creatures, as well as some fungi and insects, exhibit this phenomenon. 
+        It serves various purposes, including attracting mates, deterring predators, and luring prey. 
+        The light produced is often blue or green and is a fascinating adaption in nature.
+    </p>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <!-- *** STUDENTS: Replace YOUR_API_KEY text with provided key in class for property src in next line *** -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&v=weekly" async>
+          
+    </script>
+  </body>
+</html>
