@@ -547,6 +547,7 @@
       "type": "Feature",
       "properties": {},
       "geometry": {
+      "type": "LineString",
         "coordinates": [
           [
             68.27555712505082,
@@ -556,8 +557,7 @@
             85.51029829141186,
             4.762640878823689
           ]
-        ],
-        "type": "LineString"
+        ]
       }
     }
   ]
